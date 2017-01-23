@@ -1,4 +1,4 @@
-function countSmileys(arr) {
+/*function countSmileys(arr) {
   var count = 0;
   function check(str) {
     if (str.length == 2) {
@@ -10,6 +10,10 @@ function countSmileys(arr) {
     return count;
   }
   return arr.filter( (item) => check(item) > 0 ).length;
+}
+*/
+function countSmileys(arr) {
+  return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
 }
 
 console.log(countSmileys([':)', ';(', ';}', ':-D']));
