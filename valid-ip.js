@@ -9,6 +9,7 @@
   return count == 4 ? true : false;
 }
 */
+/*
 function isValidIP(str) {
   var check = str.split('');
   if (check.some(i => i == " ")) return false; else {
@@ -19,4 +20,11 @@ function isValidIP(str) {
     });
   }
 }
+*/
+
+// REGULAR EXPRESSION
+function isValidIP(str) {
+  return /^(([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])(\.(?!$)|$)){4}$/.test(str);
+}
+
 console.log(isValidIP('1.2.3.4'));
