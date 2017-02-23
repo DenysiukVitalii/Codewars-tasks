@@ -11,4 +11,7 @@ function unflatten (flatArray) {
   }
   return unflattenArray;
 }
+
+const unflatten=a=>a.length?[(x=a.shift())<3?x:[x,...a.splice(0,x-1)],...unflatten(a)]:[]
+
 console.log(unflatten([ 1, 4, 5, 2, 1, 2, 4, 5, 2, 6, 2, 3, 3 ]));
