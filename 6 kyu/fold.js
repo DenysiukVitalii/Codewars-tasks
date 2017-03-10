@@ -25,4 +25,10 @@ function foldArray(array, runs) {
 return arr;
 }
 
+function foldArray(a, n) {
+  const r = [], c = a.slice();
+  while (c.length) r.push(c.pop() + (c.shift() || 0));
+  return n - 1 ? foldArray(r, n - 1) : r;
+}
+
 console.log(foldArray([1,2,3,4,5], 1));
