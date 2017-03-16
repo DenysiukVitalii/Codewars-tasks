@@ -4,4 +4,8 @@ function digital_root(n) {
   return str >= 10 ? digital_root(str) : str;
 }
 
+function digital_root(n) {
+  return (n - 1) % 9 + 1;
+}
+
 console.log(digital_root(568));
