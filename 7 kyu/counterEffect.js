@@ -13,4 +13,16 @@ function counterEffect(hitCount) {
   return result;
 }
 
+// best practices
+
+function counterEffect(hitCount) {
+  return hitCount.split('')
+    .map(i => parseInt(i))
+    .map(j => Array.from(Array(j+1), (_, i) => i));
+}
+
+function counterEffect(hitCount) {
+  return [...hitCount].map( d => Array.from({length:+d+1}, (_,i) => i) )
+}
+
 console.log(counterEffect("1250"));
