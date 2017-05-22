@@ -7,6 +7,10 @@ function removeUrlAnchor(url){
   return url.slice(0, posAnchor);
 }
 
+//best practices
+const removeUrlAnchor = url => url.split('#')[0];
+const removeUrlAnchor = url => url.replace(/#.+/g, '');
+
 // returns 'www.codewars.com'
 removeUrlAnchor('www.codewars.com#about')
 
