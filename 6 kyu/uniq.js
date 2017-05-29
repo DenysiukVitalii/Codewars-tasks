@@ -9,5 +9,9 @@ function uniq(a){
     }, []);
 }
 
+// best practices
+
+const uniq = a => a.filter((el, i) => i == 0 || !(a[i-1] == el));
+
 var input = ['a','a','b','b','c','a','b','c'];
 console.log(uniq(input));
