@@ -14,4 +14,8 @@ const x = (n) => {
   return rows;
 }
 
+// best practices
+
+const x = n => Array(...Array(n)).map((_, i) => Array(...Array(n)).map((_, j) => j == i || j == n - i - 1 ? 1 : 0));
+
 console.log(x(5));
