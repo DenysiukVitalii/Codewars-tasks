@@ -3,7 +3,7 @@
 // default parameters
 
 function showMenu(title = "Без заголовка", width = 100, height = 200) {
-  alert(title + ' ' + width + ' ' + height);
+  console.log(title + ' ' + width + ' ' + height);
 }
 
 showMenu("Меню"); // Меню 100 200
@@ -11,7 +11,7 @@ showMenu("Меню"); // Меню 100 200
 // spread instead of arguments
 
 function showName(firstName, lastName, ...rest) {
-  alert(firstName + ' ' + lastName + ' - ' + rest);
+  console.log(firstName + ' ' + lastName + ' - ' + rest);
 }
 
 showName("Юлий", "Цезарь", "Император", "Рима"); // выведет: Юлий Цезарь - Император,Рима
@@ -22,7 +22,7 @@ let numbers = [2, 3, 15];
 // Этот вызов аналогичен Math.max(2, 3, 15)
 let max = Math.max(...numbers); // Math.max.apply(Math, numbers);
 
-alert( max ); // 15
+console.log( max ); // 15
 
 
 // destructuring in parameters
@@ -34,7 +34,7 @@ let options = {
 };
 
 function showMenu({title, width, height}) {
-  alert(title + ' ' + width + ' ' + height); // Меню 100 200
+  console.log(title + ' ' + width + ' ' + height); // Меню 100 200
 }
 
 showMenu(options);

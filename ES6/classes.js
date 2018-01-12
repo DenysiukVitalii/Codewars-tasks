@@ -28,13 +28,13 @@ class User {
   static createGuest() {
     return new User("Гость", "Сайта");
   }
-};
+}
 
-let user = User.createGuest();
+//let user = User.createGuest();
 
-alert( user.firstName ); // Гость
+console.log( user.firstName ); // Гость
 
-alert( User.createGuest ); // createGuest ... (функция)
+console.log( User.createGuest ); // createGuest ... (функция)
 
 /* ------------------------------------------- */
 
@@ -46,14 +46,14 @@ class Animal {
   }
 
   walk() {
-    alert("I walk: " + this.name);
+    console.log("I walk: " + this.name);
   }
 }
 
 class Rabbit extends Animal {
   walk() {
     super.walk();
-    alert("...and jump!");
+    console.log("...and jump!");
   }
 }
 
@@ -71,7 +71,7 @@ class Animal {
 
 class Rabbit extends Animal {
   constructor() {
-    alert(this); // ошибка, this не определён!
+    console.log(this); // ошибка, this не определён!
     // обязаны вызвать super() до обращения к this
     super("Rabbit");
     // а вот здесь уже можно использовать this
